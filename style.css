@@ -6,48 +6,208 @@
   Source: https://www.joshwcomeau.com/css/custom-css-reset/
 **/
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
+
 /* 2. Remove default margin */
 * {
   margin: 0;
 }
+
 body {
   /* 3. Add accessible line-height */
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
 }
+
 /* 5. Improve media defaults */
-img, picture, video, canvas, svg {
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
+
 /* 6. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
+
 /* 7. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
+
 /* 8. Improve line wrapping */
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
+
 /*
   9. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
 
 /** Your CSS Below **/
+body {
+  font-size: var(--font-paragraph);
+  font-family: var(--fs-base);
+  max-width: var(--width-desktop);
+  margin: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--clr-stone100);
+
+}
+
+.sor-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 700px;
+  margin: auto;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.sor-card img {
+  border-radius: 10px;
+  margin: 0.5rem;
+}
+
+.sor-header {
+  font-size: var(--font-header);
+  font-family: var(--fs-accent);
+}
+
+.sor-hearder-description {
+  padding-top: 10px;
+  padding-bottom: 25px;
+}
+
+
+.Preparationtime {
+  background-color: var(--clr-rose50);
+  padding: 2rem;
+  line-height: 2rem;
+}
+
+.h3 {
+  color: var(--clr-rose800);
+  font-family: var(--fs-base);
+  font-weight: var(--fw-bold);
+  font-size: 20px;
+}
+
+.Preparationtime li::marker {
+  color: var(--clr-rose800);
+  padding-right: 4rem;
+}
+
+.Ingredients {
+  margin: 15px;
+  line-height: 1.8rem;
+}
+
+.sub_header {
+  color: var(--clr-brown800);
+  font-family: var(--fs-accent);
+  font-weight: var(--fw-bold);
+  font-size: var(--font-sub-header);
+  padding-bottom: 1rem;
+}
+
+.Ingredients li::marker {
+  color: var(--clr-brown800);
+  padding-right: 4rem;
+}
+
+.num {
+  color: var(--clr-brown800);
+  font-weight: var(--fw-bold);
+  padding-right: 20px;
+}
+
+.bold {
+  font-weight: var(--fw-bold);
+  color: var(--clr-stone900);
+}
+
+.instructions {
+  list-style: none;
+  padding-left: 0;
+}
+
+.instructions li {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  margin-bottom: 10px;
+}
+
+.Nutrition_details {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+  margin: 0.8rem;
+}
+
+.Nutrition_name {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  padding-left: 20px;
+
+}
+
+.Nutrition_num {
+  position: absolute;
+  left: 50%;
+  color: var(--clr-brown800);
+  font-weight: var(--fw-bold);
+}
+
+.Nutrition_despription {
+  padding-bottom: 20px;
+}
 
 /** Attribution CSS **/
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
